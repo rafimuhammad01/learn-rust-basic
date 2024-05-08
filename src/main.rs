@@ -18,16 +18,16 @@ fn main() {
         let mut guess = String::new();
 
         io::stdin()
-        .read_line(&mut guess)
-        .expect("failed to readline");
+            .read_line(&mut guess)
+            .expect("failed to readline");
 
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => {
                 println!("Please enter a number");
                 is_previous_err = true;
-                continue; 
-            },
+                continue;
+            }
         };
 
         is_previous_err = false;
